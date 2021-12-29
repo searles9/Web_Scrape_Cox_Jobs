@@ -8,6 +8,7 @@ The Cox Auto job site dynamically populates with jobs, however it only displays 
 
 ***
 # Important Setup Info
+**Complete the setup steps below:** <br><br>
 To use the web scraper you need to have chrome and the chrome driver binary installed. 
 The versions installed need to match. 
 ### Install chrome
@@ -20,6 +21,11 @@ pip install chromedriver-binary-auto
 
 # Reinstall
 pip install --upgrade --force-reinstall chromedriver-binary-auto
+```
+### Install the other dependencies
+* install the dependencies in the requirements.txt file
+```
+pip install -r requirements.txt
 ```
 ***
 ***
