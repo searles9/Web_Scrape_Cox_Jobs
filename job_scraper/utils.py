@@ -22,11 +22,11 @@ def print_jobs_bullet_points(jobs):
         location = job[1]
         division = job[2]
         url = job[3]
-        print("--------------------------------------------------")
         print(f"* TITLE: {title}")
         print(f"* LOCATION: {location}")
         print(f"* DIVISION: {division}")
         print(f"* URL: {url}")
+        print("--------------------------------------------------")
 
 def make_jobs_list_message(jobs):
     """
@@ -34,9 +34,9 @@ def make_jobs_list_message(jobs):
     """
     jobs_message = ""
     for job in jobs:
-        jobs_message += "--------------------------------------------------\n"
         jobs_message += f"* TITLE: {job[0]}\n"
         jobs_message += f"* LOCATION: {job[1]}\n"
         jobs_message += f"* DIVISION: {job[2]}\n"
         jobs_message += f"* URL: {job[3]}\n"
+        jobs_message += "--------------------------------------------------\n"
     return jobs_message

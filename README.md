@@ -28,5 +28,4 @@ pip install --upgrade --force-reinstall chromedriver-binary-auto
 pip install -r requirements.txt
 ```
 ***
-***
 
