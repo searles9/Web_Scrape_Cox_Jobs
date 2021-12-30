@@ -56,6 +56,7 @@ def jobs_to_excel(jobs,filename):
 def add_excel_sheet(jobs,file,sheetname):
     print(f"***Adding {sheetname} sheet to the excel file")
     df = pd.DataFrame(jobs)
+    df.columns = ['Title', 'Location', 'Division', 'URL']
     with pd.ExcelWriter(file, engine='openpyxl', mode='a') as writer:  
         df.to_excel(writer, sheet_name=sheetname , index=False)
     print(f"***The sheet has been added to {file}")
