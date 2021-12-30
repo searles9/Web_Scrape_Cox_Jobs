@@ -25,7 +25,7 @@ def filter_security(all_jobs):
                  "Manager", "Financal","Finance","Payroll","HR","Marketing","SEO",
                  "Tax","Photojournalist","Executive","Sales","Buissness","Compensation","Recruiting",
                  "Litigation","Payable","Vehicle","Arbitrator","UX","Recruiter"]
-    return utils.filter_jobs_by_title(all_jobs, good_terms, bad_terms)
+    return utils.filter_jobs_by_title(all_jobs, good_terms=good_terms, bad_terms=bad_terms)
 
 def filter_general(all_jobs):
     good_terms = ["Security","Solutions","Cloud","Cyber","Reliability","Architect","Systems","System","Infrastructure"]
@@ -33,7 +33,7 @@ def filter_general(all_jobs):
                  "Manager", "Financal","Finance","Payroll","HR","Marketing","SEO",
                  "Tax","Photojournalist","Executive","Sales","Buissness","Compensation","Recruiting",
                  "Litigation","Payable","Vehicle","Arbitrator","UX","Recruiter"]
-    return utils.filter_jobs_by_title(all_jobs, good_terms, bad_terms)
+    return utils.filter_jobs_by_title(all_jobs, good_terms=good_terms, bad_terms=bad_terms)
 
 if __name__ == "__main__":
     # Scrape Jobs
