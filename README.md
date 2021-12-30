@@ -38,7 +38,7 @@ Before you can run the scraper you need to update the values in the ```main.py``
     * google requires that you use an app password. here is info on setting up an app password for google: https://support.google.com/accounts/answer/185833?hl=en
 * update the ```site_url``` variable. go to the cox job site, do a search and grab the url
 ### Quick usage
-Execute the ```main.py``` file to run the scraper.
+Execute the ```main.py``` file to run the scraper (you need all files in the job_scraper folder to run this).
 ```
 python main.py
 ```
