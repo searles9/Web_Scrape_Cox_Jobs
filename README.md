@@ -1,10 +1,12 @@
 # Web_Scrape_Cox_Jobs
+**THIS PROJECT IS STILL IN PROGRESS. IT IS FUNCTIONAL HOWEVER I INTEND TO ADD SOME FILTERING FUNCTIONALITY** <br><br>
 The Cox Auto job site dynamically populates with jobs, however it only displays 10 jobs per page. This script can be used to easily pull and filter the jobs from the job site.
 
 * Job site: https://jobs.coxenterprises.com/
 ***
 # TOC
 1. [Important Setup Info](#)
+2. [Usage / Quick Code Overview](#)
 
 ***
 # Important Setup Info
@@ -28,4 +30,28 @@ pip install --upgrade --force-reinstall chromedriver-binary-auto
 pip install -r requirements.txt
 ```
 ***
-
+# Usage / Quick Code Overview
+### Setup needed to run the scraper
+Before you can run the scraper you need to update the values in the ```main.py``` file.
+* update the ```EMAIL_INFO``` dictionary
+    * the script requires that you send the email from a gmail account
+    * google requires that you use an app password. here is info on setting up an app password for google: https://support.google.com/accounts/answer/185833?hl=en
+* update the ```site_url``` variable. go to the cox job site, do a search and grab the url
+### Quick usage
+Execute the ```main.py``` file to run the scraper.
+```
+python main.py
+```
+Expected output (for email):
+```
+Collected 10 results from page 1
+Collected 10 results from page 2
+Collected 6 results from page 3
+***Gathered jobs from 3 pages
+--------------------------------------------------
+***Generating excel document with jobs
+***Excel document successfully generated
+***Sending email with jobs
+***The email was successfully sent!
+***Deleted temporary job file from the system: All_Jobs.xlsx
+```

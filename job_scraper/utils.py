@@ -1,5 +1,7 @@
 # Functions to help filter and view the job data
 from tabulate import tabulate
+import pandas as pd
+import os
 
 def print_jobs_in_grid(jobs):
     """Prints jobs with a grid format
@@ -40,3 +42,17 @@ def make_jobs_list_message(jobs):
         jobs_message += f"* URL: {job[3]}\n"
         jobs_message += "--------------------------------------------------\n"
     return jobs_message
+
+def jobs_to_excel(jobs,filename):
+    print("***Generating excel document with jobs")
+    df = pd.DataFrame(jobs)
+    df.columns = ['Title', 'Location', 'Division', 'URL']
+    writer = pd.ExcelWriter(filename, engine='xlsxwriter')
+    df.to_excel(writer, sheet_name='Jobs', index=False)
+    writer.save()
+    print("***Excel document successfully generated")
+
+def delete_files(files):
+    for x in files:
+        os.remove(x) 
+        print(f"***Deleted temporary job file from the system: {x}")

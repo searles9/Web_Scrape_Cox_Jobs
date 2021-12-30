@@ -8,6 +8,7 @@ def get_jobs(base_url):
     returns job_details: list of lists
     job_details = [ [title, location, division, url], ... ]
     """
+    print("--------------------------------------------------")
     job_details = []
     page_still_valid = True
     page = 1
@@ -34,5 +35,6 @@ def get_jobs(base_url):
             break
         page += 1
     driver.quit()
+    print("--------------------------------------------------")
     return job_details
 
