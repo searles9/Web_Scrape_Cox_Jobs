@@ -1,6 +1,6 @@
 # Web_Scrape_Cox_Jobs
 **THIS PROJECT IS STILL IN PROGRESS. IT IS FUNCTIONAL HOWEVER I INTEND TO ADD SOME FILTERING FUNCTIONALITY** <br><br>
-The Cox Auto job site dynamically populates with jobs, however it only displays 10 jobs per page. This script can be used to easily pull and filter the jobs from the job site.
+The Cox job site dynamically populates with jobs, however it only displays 10 jobs per page. This script can be used to easily pull and filter the jobs from the job site.
 
 * Job site: https://jobs.coxenterprises.com/
 ***
