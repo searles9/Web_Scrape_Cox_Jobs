@@ -2,6 +2,7 @@
 from tabulate import tabulate
 import pandas as pd
 import os
+import openpyxl
 
 def print_jobs_in_grid(jobs):
     """Prints jobs with a grid format
@@ -51,6 +52,14 @@ def jobs_to_excel(jobs,filename):
     df.to_excel(writer, sheet_name='Jobs', index=False)
     writer.save()
     print("***Excel document successfully generated")
+
+def add_excel_sheet(jobs,file,sheetname):
+    print(f"***Adding {sheetname} sheet to the excel file")
+    df = pd.DataFrame(jobs)
+    df.columns = ['Title', 'Location', 'Division', 'URL']
+    with pd.ExcelWriter(file, engine='openpyxl', mode='a') as writer:  
+        df.to_excel(writer, sheet_name=sheetname , index=False)
+    print(f"***The sheet has been added to {file}")
 
 def delete_files(files):
     for x in files:
