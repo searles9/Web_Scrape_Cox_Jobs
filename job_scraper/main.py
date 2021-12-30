@@ -6,7 +6,7 @@ import send_gmail
 DEBUG = False
 SEND_EMAIL = True
 EMAIL_INFO = {
-            "FILES": [],
+            "FILES": [], # leave this FILES line empty
             "EMAIL_SUBJECT": "Cox Jobs",
             "SENDER_EMAIL": "x",
             "EMAIL_TO": ["x","x","x"],
