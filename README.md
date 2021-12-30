@@ -5,8 +5,8 @@ The Cox job site dynamically populates with jobs, however it only displays 10 jo
 * Job site: https://jobs.coxenterprises.com/
 ***
 # TOC
-1. [Important Setup Info](#)
-2. [Usage / Quick Code Overview](#)
+1. [Important Setup Info](https://github.com/searles9/Web_Scrape_Cox_Jobs#important-setup-info)
+2. [Usage / Quick Code Overview](https://github.com/searles9/Web_Scrape_Cox_Jobs#usage--quick-code-overview)
 
 ***
 # Important Setup Info
