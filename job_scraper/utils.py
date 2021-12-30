@@ -65,13 +65,11 @@ def contains_substring(sub_string, the_string,):
     """
     the_string = the_string.upper().split(" ")
     sub_string = sub_string.upper()
-    if sub_string in the_string:
-        return True
-    return False
+    return sub_string in the_string
 
 def contains_term(the_string, the_list):
-    """Checks if the_string exists in the_list
-    
+    """
+    Checks if the_string exists in the_list
     """
     for item in the_list:
         if contains_substring(item, the_string): # if the term is in the list
