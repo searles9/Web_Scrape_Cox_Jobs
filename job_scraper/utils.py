@@ -56,3 +56,34 @@ def delete_files(files):
     for x in files:
         os.remove(x) 
         print(f"***Deleted temporary job file from the system: {x}")
+
+def contains_substring(sub_string, the_string,):
+    """Checks if sub_string exists in the_string and returns True if it does
+
+    sub_string: str
+    the_string: str
+    """
+    the_string = the_string.upper().split(" ")
+    sub_string = sub_string.upper()
+    if sub_string in the_string:
+        return True
+    return False
+
+def contains_term(the_string, the_list):
+    """Checks if the_string exists in the_list
+    
+    """
+    for item in the_list:
+        if contains_substring(item, the_string): # if the term is in the list
+            return True
+    return False
+
+def filter_jobs_by_title(jobs, good_terms=[], bad_terms=[]):
+    job_list = jobs
+    # Filter once to drop items that contain bad terms
+    if len(bad_terms) > 0:
+        job_list = [job for job in job_list if not contains_term(job[0],bad_terms)]
+    # Filter again to only include items that are in the good terms list
+    if len(good_terms) > 0:
+        job_list = [job for job in job_list if contains_term(job[0],good_terms)]
+    return job_list
