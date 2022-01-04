@@ -45,22 +45,23 @@ python main.py
 ```
 Expected output (for email):
 ```
-Collected 10 results from page 12
-Collected 10 results from page 13
-Collected 10 results from page 14
-Collected 10 results from page 15
-Collected 10 results from page 16
-Collected 10 results from page 17
-Collected 4 results from page 18
-***Gathered jobs from 18 pages
+Collected 10 results from page 37
+Collected 10 results from page 38
+Collected 10 results from page 39
+Collected 10 results from page 40
+Collected 10 results from page 41
+Collected 5 results from page 42
+***Gathered jobs from 42 pages
 --------------------------------------------------
 ***Generating excel document with jobs
 ***Excel document successfully generated
-***Adding Security-Filter sheet to the excel file
-***The sheet has been added to Jobs.xlsx
-***Adding General-Filter sheet to the excel file
-***The sheet has been added to Jobs.xlsx
+***Adding 'Security-Filter' sheet to the excel file
+        ***The 'Security-Filter' sheet has been added to Jobs-2022-01-03.xlsx
+***Adding 'General-Filter' sheet to the excel file
+        ***The 'General-Filter' sheet has been added to Jobs-2022-01-03.xlsx
+***Adding 'Roles-Without-Bad-Terms' sheet to the excel file
+        ***The 'Roles-Without-Bad-Terms' sheet has been added to Jobs-2022-01-03.xlsx
 ***Sending email with jobs
 ***The email was successfully sent!
-***Deleted temporary job file from the system: Jobs.xlsx
+***Deleted temporary job file from the system: Jobs-2022-01-03.xlsx
 ```
