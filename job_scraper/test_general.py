@@ -11,20 +11,20 @@ job_list = [
         ]
 
 class TestStrings(unittest.TestCase):
-    def test_contains_sub_string(self):
-        """
-        Checks if the sub_string is in the_string
-        """
-        the_string = "Security Engineer 2"
-        sub_string = "Security"
-        result = utils.contains_substring(sub_string,the_string)
-        self.assertTrue(result)
-
     def test_contains_term(self):
         """
-        Checks if the string is in the list
+        Checks if any of the terms in the list exsit in the string
         """
-        the_string = "Senior"
+        the_string = "Senior Developer"
+        the_list = ["Senior Developer","Azure"]
+        result = utils.contains_term(the_string,the_list)
+        self.assertTrue(result)
+
+    def test_contains_term_2(self):
+        """
+        Checks if any of the terms in the list exsit in the string
+        """
+        the_string = "Senior Developer"
         the_list = ["Senior","Azure"]
         result = utils.contains_term(the_string,the_list)
         self.assertTrue(result)
@@ -37,7 +37,7 @@ class CheckFilters(unittest.TestCase):
         bad_terms = ["Vehicle","Software"]
         result = utils.filter_jobs_by_title(job_list,bad_terms=bad_terms)
         expected_result = [["Security Engineer 2","Atlanta, GA", "Cox Automotive", "https://jobs.com" ]]
-        self.assertEqual(result,expected_result)
+        self.assertEqual(result, expected_result)
 
     def test_filter_good_jobs(self):
         """
@@ -47,7 +47,7 @@ class CheckFilters(unittest.TestCase):
         good_terms = ["Security"]
         result = utils.filter_jobs_by_title(job_list,good_terms=good_terms)
         expected_result = [["Security Engineer 2","Atlanta, GA", "Cox Automotive", "https://jobs.com" ]]
-        self.assertEqual(result,expected_result)
+        self.assertEqual(result, expected_result)
 
     def test_filter_both(self):
         bad_terms = ["Vehicle"]
@@ -57,7 +57,7 @@ class CheckFilters(unittest.TestCase):
              ["Security Engineer 2","Atlanta, GA", "Cox Automotive", "https://jobs.com" ],
              ["Sr Software Engineer","Atlanta, GA", "Cox Automotive", "https://jobs.com" ]
         ]
-        self.assertEqual(result,expected_result)
+        self.assertEqual(result, expected_result)
 
 
 if __name__ == '__main__':
