@@ -30,16 +30,9 @@ pip install --upgrade --force-reinstall chromedriver-binary-auto
 pip install -r requirements.txt
 ```
 ***
-# Usage / Quick Code Overview
-### Setup needed to run the scraper
-Before you can run the scraper you need to update the values in the ```main.py``` file.
-* update the ```EMAIL_INFO``` dictionary
-    * the script requires that you send the email from a gmail account
-    * google requires that you use an app password. here is info on setting up an app password for google: https://support.google.com/accounts/answer/185833?hl=en
-* update the site url variables if needed. go to the cox job site, do a search and grab the url
-* update the fiters, or remove them if you only want to see all of the jobs
 ### Quick usage
-Execute the ```main.py``` file to run the scraper (you need all files in the job_scraper folder to run this).
+First update the ```main.py``` file as needed. If needed also update the ```filters.py``` file.
+Execute the ```main.py``` file to run the scraper:
 ```
 python main.py
 ```

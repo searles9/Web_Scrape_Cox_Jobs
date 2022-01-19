@@ -7,3 +7,5 @@ selenium==3.141.0
 pandas
 openpyxl==3.0.9
 XlsxWriter==3.0.2
+autopep8
+isort

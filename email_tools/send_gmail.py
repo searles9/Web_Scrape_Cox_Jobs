@@ -1,22 +1,23 @@
 # Send Gmail Email
-from email.mime.multipart import MIMEMultipart
-from email.mime.application import MIMEApplication
-from email.mime.text import MIMEText
 import smtplib
-
+from email.mime.application import MIMEApplication
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 
 
 def send_gmail_email(email_info):
+    '''Sends email from a gmail address. 
+    The email can contain files if specified.
 
+    Args:
+        email_info (dict): dictionary containing email information
+    '''
     FILES = email_info["FILES"]
     EMAIL_SUBJECT = email_info["EMAIL_SUBJECT"]
     SENDER_EMAIL = email_info["SENDER_EMAIL"]
     EMAIL_TO = email_info["EMAIL_TO"]
     MESSAGE_BODY = email_info["MESSAGE_BODY"]
     SENDER_APP_PASSWORD = email_info["SENDER_APP_PASSWORD"]
-
-# email_info["EMAIL_TO"]
-
 
     # Create a multipart message
     msg = MIMEMultipart()
@@ -30,7 +31,7 @@ def send_gmail_email(email_info):
     if FILES:
         for file in FILES:
             filename = str(file)
-            with open(file,'rb') as file:
+            with open(file, 'rb') as file:
                 msg.attach(MIMEApplication(file.read(), Name=filename))
 
     # Create SMTP object
