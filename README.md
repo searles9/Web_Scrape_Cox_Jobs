@@ -1,5 +1,4 @@
 # Web_Scrape_Cox_Jobs
-**I intend to cleanup the code a little later but its functional** <br><br>
 The Cox job site dynamically populates with jobs, however it only displays 10 jobs per page. This script can be used to easily pull and filter the jobs from the job site.
 
 * Job site: https://jobs.coxenterprises.com/
